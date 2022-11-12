@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Test from "../common/Test";
+import Error from "./Error";
 function Index() {
     return (
 
         <div className="bg-white dark:bg-darker">
+
             <nav className="fixed z-10 w-full bg-white dark:bg-transparent md:absolute md:bg-transparent">
                 <div className="container m-auto px-2 md:px-12 lg:px-7">
                     <div className="flex flex-wrap items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
@@ -66,7 +69,7 @@ function Index() {
                     </div>
                 </div>
             </nav>
-            <div className="relative  dark:bg-gray-900 h-screen" style={{backgroundColor:"#fff7fa"}}>
+            <div className="  dark:bg-gray-900 h-screen" style={{ backgroundColor: "#fff7fa" }}>
                 <div className="container m-auto px-6 pt-32 md:px-12 lg:pt-[4.8rem] lg:px-7">
                     <div className="flex items-center flex-wrap px-2 md:px-0">
                         <div className="relative lg:w-6/12 lg:py-24 xl:py-32">
@@ -80,7 +83,7 @@ function Index() {
                                         <label role="button" className="absolute top-0 left-0 w-full h-full"></label>
                                         <span className="min-w-max">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-gray-700 dark:fill-gray-200" viewBox="0 0 20 20" fill="currentColor">
-                                                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule={"evenodd"}/>
+                                                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule={"evenodd"} />
                                             </svg>
                                         </span>
                                         <div id="categorieLst" className="absolute transition-all duration-500 ease-in-out translate-y-10 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible peer-checked:translate-y-1 top-full left-0 w-full bg-white border border-yellow-200 shadow-md rounded-lg py-2">
