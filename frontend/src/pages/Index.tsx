@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Index() {
     return (
 
@@ -8,10 +9,11 @@ function Index() {
                     <div className="flex flex-wrap items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                         <div className="w-full px-6 flex justify-between lg:w-max md:px-0 z-30">
-                            <a href="#" aria-label="logo" className="flex space-x-2 items-center">
+
+                            <Link to={'/'} aria-label="logo" className="flex space-x-2 items-center">
                                 <img src="https://tailus.io/sources/blocks/food-delivery/preview/images/icon.png" className="w-12" alt="tailus logo" width="144" height="133" />
                                 <span className="text-2xl font-bold text-yellow-900 dark:text-white">Tailus <span className="text-yellow-700 dark:text-yellow-300">Feedus</span></span>
-                            </a>
+                            </Link>
 
                             <div className="flex items-center lg:hidden max-h-10">
                                 <label role="button" aria-label="humburger" id="hamburger" className="relative w-10 h-auto p-2">
