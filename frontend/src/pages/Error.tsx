@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import img404 from '../assets/404.png';
+import groupImage from '../assets/Group.png'
 const Error = () => {
     return (
         <div>
@@ -19,16 +21,15 @@ const Error = () => {
                             </div>
                         </div>
                         <div>
-                            <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
+                            <img src={img404} alt="404 Error" />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="https://i.ibb.co/ck1SGFJ/Group.png" />
+                    <img src={groupImage} alt="img" />
                 </div>
             </div>
         </div>
     )
 }
-
 export default Error
