@@ -4,7 +4,7 @@ import LoginCard from './Login/LoginCard';
 import SignupCard from './Login/SignupCard';
 const Login = () => {
     const {props}=useParams();
-     console.log(typeof(props));
+
      
     if(props==="true")
     {
