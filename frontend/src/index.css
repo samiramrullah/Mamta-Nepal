@@ -6,5 +6,7 @@
 @layer base {
     html{
         scroll-behavior: smooth;
+        background-image: linear-gradient(to bottom right, #FFFFFF, #fee2e2);
+    
     }
 }

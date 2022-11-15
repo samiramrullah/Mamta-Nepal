@@ -4,21 +4,21 @@ const Login = () => {
     return (
         <section className="h-full font-poppins ">
             <div className="relative z-10 flex justify-center h-screen py-7 lg:py-16 dark:bg-gray-800 2xl:py-44">
-                <div
+                {/* <div
                     className="absolute top-0 bottom-0 left-0 w-full h-full bg-gray-50 dark:bg-gray-900 lg:bottom-0 lg:h-auto lg:w-full">
                     <div className="absolute inset-0 lg:bg-[#00000066] "></div>
-                    <img src="https://images.pexels.com/photos/7321/sea-water-ocean-horizon.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    <img src="https://img.freepik.com/free-photo/young-mom-holding-her-baby-air-blank-space_53876-97233.jpg?w=2000&t=st=1668540872~exp=1668541472~hmac=2e4fe4c278e3fee7f341bcb956e0b01a57372e11b85bbd4ca625bb690b10adb8"
                         alt="" className="hidden object-cover w-full h-full lg:block" />
-                </div>
+                </div> */}
                 <div className="flex items-center justify-center">
                     <div className="relative max-w-6xl px-4 mx-auto">
                         <div className="max-w-xl mx-auto lg:max-w-5xl">
                             <div className="flex flex-wrap items-center -mx-4">
                                 <div className="hidden w-full px-6 mb-16 lg:w-3/5 lg:mb-0 lg:block">
                                     <h2
-                                        className="text-4xl font-bold leading-loose text-left text-gray-100 dark:text-gray-300 mb-9 lg:text-6xl ">
+                                        className="text-4xl font-bold leading-loose text-left text-red-400 dark:text-gray-300 mb-9 lg:text-6xl ">
                                         Welcome and join our community</h2>
-                                    <p className="text-lg text-left text-gray-200 dark:text-gray-300 ">You are welcome here!</p>
+                                    <p className="text-lg text-left text-red-400 dark:text-gray-300 ">You are welcome here!</p>
                                 </div>
                                 <div className="w-full px-4 lg:w-2/5">
                                     <div className="p-6 shadow-md lg:p-9 bg-gray-50 dark:bg-gray-900 ">
