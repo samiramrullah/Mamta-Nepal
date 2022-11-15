@@ -1,5 +1,6 @@
 import React from "react";
 import img from '../assets/hero.png';
+import { Link } from "react-router-dom";
 function Index() {
     return (
         <>
@@ -32,10 +33,10 @@ function Index() {
                                     incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed do Ut
                                     enim ad minim veniam
                                 </p>
-                                <a className="inline-block w-full px-6 py-4 mb-2 text-lg font-medium leading-6 text-center text-white transition duration-200 bg-red-400 rounded shado md:w-auto md:mb-0 md:mr-4 hover:bg-red-600"
-                                    href="#">
+                                <Link className="inline-block w-full px-6 py-4 mb-2 text-lg font-medium leading-6 text-center text-white transition duration-200 bg-red-400 rounded shado md:w-auto md:mb-0 md:mr-4 hover:bg-red-600"
+                                    to={`/login/${false}`}>
                                     Request a demo
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="w-full px-4 mt-20 lg:w-2/5 lg:mt-0">
