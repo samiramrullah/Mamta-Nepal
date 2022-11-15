@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from'react-router-dom';
 const Login = () => {
     return (
-        <section className="h-96 lg:h-screen font-poppins ">
+        <section className="h-full font-poppins ">
             <div className="relative z-10 flex justify-center h-screen py-7 lg:py-16 dark:bg-gray-800 2xl:py-44">
                 <div
                     className="absolute top-0 bottom-0 left-0 w-full h-full bg-gray-50 dark:bg-gray-900 lg:bottom-0 lg:h-auto lg:w-full">
