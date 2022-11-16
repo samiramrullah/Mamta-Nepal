@@ -3,10 +3,8 @@ import { useParams } from 'react-router-dom';
 import LoginCard from './Login/LoginCard';
 import SignupCard from './Login/SignupCard';
 const Login = () => {
-    const {props}=useParams();
-
-     
-    if(props==="true")
+    const {login}=useParams();
+    if(login==="true")
     {
         return(
             <LoginCard/>

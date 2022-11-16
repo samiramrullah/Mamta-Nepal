@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginCard = () => {
     return (
@@ -83,8 +84,8 @@ const LoginCard = () => {
                                             <div
                                                 className="flex flex-wrap items-center mt-3 text-sm text-gray-700 lg:text-base lg:mt-5 dark:text-gray-400">
                                                 Need an account?
-                                                <a href="#" className="ml-2 text-base font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
-                                                    Create an account</a>
+                                                <Link to={`/login/${false}`} className="ml-2 text-base font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
+                                                    Create an account</Link>
                                             </div>
                                         </form>
                                     </div>
