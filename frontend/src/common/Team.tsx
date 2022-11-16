@@ -3,23 +3,21 @@ import TeamCard from '../utils/Cards/TeamCard'
 import team1 from '../assets/albert.jpg';
 const Team = () => {
     const data = [{
-        name: 'Samir',
-        designation: 'CEO of Sex',
+        name: 'Samir Alam',
+        designation: 'Don of Birgunj',
         image:team1,
     },
     {
-        name: 'Zayn Malik',
-        designation: 'CEO of Sex',
+        name: 'Biswash Pokhrel',
+        designation: 'Don of Pokhara',
         image:team1,
     },
     {
-        name: 'Katy Perry',
-        designation: 'CEO of Sex',
+        name: 'Aashish Adhikari',
+        designation: 'Don of Chitwan',
         image:team1,
     },
 ]
-console.log(typeof(data[0].image));
-
     return (
         <>
             <div className="py-20">

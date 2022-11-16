@@ -8,7 +8,7 @@ import Team from "../common/Team";
 function Index() {
     return (
         <>
-            <section className="h-full overflow-hidden md:mt-40 mt-6">
+            <section className="h-full overflow-hidden md:mt-40 mt-16">
                 <div className="container px-4 mx-auto mt-12">
                     <div className="flex flex-wrap items-center -mx-4">
                         {/* <div className="w-auto px-4 mb-4 text-center ">
