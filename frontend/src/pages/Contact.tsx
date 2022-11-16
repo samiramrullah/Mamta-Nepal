@@ -39,7 +39,7 @@ const Contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-lg font-semibold tracking-wide text-black">
-                                        01451987
+                                        +91-9041952237
                                     </div>
                                 </div>
                                 <div className="flex text-black md:items-center">
@@ -51,7 +51,7 @@ const Contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-lg font-semibold tracking-wide text-black ">
-                                        info@gmail.com
+                                        samiramrullah@gmail.com
                                     </div>
                                 </div>
                             </div>
