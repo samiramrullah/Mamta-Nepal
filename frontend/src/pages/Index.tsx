@@ -34,7 +34,7 @@ function Index() {
                                     enim ad minim veniam
                                 </p>
                                 <Link className="inline-block w-full px-6 py-4 mb-2 text-lg font-medium leading-6 text-center text-white transition duration-200 bg-red-400 rounded shado md:w-auto md:mb-0 md:mr-4 hover:bg-red-600"
-                                    to={`/login/${false}`}>
+                                    to={`/login/signup`}>
                                     Request a demo
                                 </Link>
                             </div>

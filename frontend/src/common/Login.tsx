@@ -4,7 +4,7 @@ import LoginCard from './Login/LoginCard';
 import SignupCard from './Login/SignupCard';
 const Login = () => {
     const {login}=useParams();
-    if(login==="true")
+    if(login==="login")
     {
         return(
             <LoginCard/>
