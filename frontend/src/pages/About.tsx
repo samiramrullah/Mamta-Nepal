@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <>
@@ -73,10 +73,10 @@ const About = () => {
                             Successful Growth for business
                         </li>
                     </ul>
-                    <a href="#"
+                    <Link to={`/login/signup`}
                         className="px-4 py-2 text-white bg-red-400 rounded-md hover:bg-red-600">
                         Learn more
-                    </a>
+                    </Link>
                 </div>
                 <div className="relative w-full px-4 mb-10 md:w-1/2 lg:mb-0">
                     <img src="https://i.postimg.cc/HsSPvTq8/pexels-fauxels-3184357.jpg" alt=""

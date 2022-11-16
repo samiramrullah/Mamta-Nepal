@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import sideimage from '../../assets/loginsideimage.webp'
 const LoginCard = () => {
     return (
         <>
@@ -11,7 +11,7 @@ const LoginCard = () => {
                             <div className="relative items-center justify-center hidden w-full lg:flex lg:w-1/2 ">
                                 <div className="absolute inset-0 z-10 bg-gray-900 opacity-40"></div>
                                 <img className="absolute inset-0 z-0 object-cover w-full h-full ml-auto"
-                                    src="https://img.freepik.com/free-photo/happy-family-with-their-first-child_1303-14155.jpg?w=1480&t=st=1668540772~exp=1668541372~hmac=4d07afd2ca92ed84dbd61e4c6a38f6d0e831029812217aa26d8df62f3303ac38" />
+                                    src={sideimage} alt="Mamta Nepal" />
                                 <div className="top-0 z-10 max-w-xl mx-auto mb-12 text-center ">
                                     <h2 className="mb-4 text-4xl font-bold text-gray-100 dark:text-gray-300 ">
                                         Welcome to our community and join with us</h2>
@@ -21,9 +21,9 @@ const LoginCard = () => {
                                             ipsum
                                         </p>
                                     </div>
-                                    <a href="#"
+                                    <Link to={`/login/signup`}
                                         className="inline-block px-6 py-2 font-medium bg-red-500 text-gray-50 dark:text-gray-300">
-                                        Join now</a>
+                                        Join now</Link>
                                 </div>
                             </div>
                             <div className="w-full py-6   lg:py-7 lg:w-1/2 dark:bg-gray-900">
@@ -74,9 +74,9 @@ const LoginCard = () => {
                                                 </div>
                                             </div>
                                             <div className="mt-5 text-right">
-                                                <a href="#"
+                                                <Link to={'/'}
                                                     className="text-sm font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
-                                                    forgot password?</a>
+                                                    forgot password?</Link>
                                             </div>
                                             <button
                                                 className="w-full px-4 py-3 mt-5 font-semibold text-gray-200 bg-red-500 rounded-lg  hover:bg-red-600"

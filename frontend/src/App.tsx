@@ -6,7 +6,6 @@ import Navbar from './common/Navbar';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Footer from './common/Footer';
 const App = () => {
   return (
     <>
@@ -19,7 +18,6 @@ const App = () => {
         <Route path='/contact' element={<Contact/>} />
         <Route path='*' element={<Error />} />
       </Routes>
-      <Footer/>
     </>
   )
 }
