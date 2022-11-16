@@ -27,7 +27,7 @@ const TeamCard = ({name, designation,img}:DetailsDatatype) => {
                     <span className="block text-sm text-gray-500">{designation}</span>
                 </div>
                 <div className="flex justify-center space-x-4 text-gray-500">
-                    <a href="fghj" target="_blank" aria-label="facebook">
+                    <a href="fghj" target="_blank" aria-label="facebook" >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-6 hover:text-primary bi bi-facebook"
