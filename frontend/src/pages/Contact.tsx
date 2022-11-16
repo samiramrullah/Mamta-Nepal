@@ -12,7 +12,7 @@ const Contact = () => {
                     <div className="flex flex-wrap px-4 py-8 rounded-md shadow">
                         <div className="w-full px-4 mb-6 lg:w-2/5 lg:mb-0">
                             <div className="relative h-full p-8 rounded-md bg-gradient-to-r  text-black">
-                                <div className="absolute pt-8 bottom-0 right-0 items-center justify-center hidden lg:inline-flex">
+                                <div className="absolute pt-10 bottom-0 right-0 items-center justify-center hidden lg:inline-flex">
                                     <img src={sidelowerimg} alt='img'></img>
                                 </div>
                                 <h2 className="mb-4 text-3xl font-bold text-black">Contact Information</h2>
@@ -28,7 +28,7 @@ const Contact = () => {
                                     </svg>
                                     <div
                                         className="max-w-xl ml-2 text-lg font-semibold tracking-wide text-black">
-                                        Sukedhara, Kathmandu , Nepal
+                                        Sector -12, Chandigarh , India
                                     </div>
                                 </div>
                                 <div className="flex mb-8 text-black md:items-center">
