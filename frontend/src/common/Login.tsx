@@ -12,7 +12,7 @@ const Login = () => {
                         <div className="flex flex-wrap ">
                             <div className="relative items-center justify-center hidden w-full lg:flex lg:w-1/2 ">
                                 <div className="absolute inset-0 z-10"></div>
-                                <img className="absolute inset-0 z-0 object-cover w-full h-full ml-auto"
+                                <img className="absolute inset-0 z-0 object-contain w-full h-full ml-auto"
                                     src={sideimage} alt="Mamta Nepal" />
                                 <div className="top-0 z-10 max-w-xl mx-auto mb-12 text-center ">
                                     <h2 className="mb-4 text-4xl font-bold text-gray-100 dark:text-gray-300 ">
@@ -118,13 +118,13 @@ const Login = () => {
                                                 <div>
                                                     <label
                                                         className="text-lg font-medium text-gray-700 dark:text-gray-400">Name:</label>
-                                                    <input type="email"
+                                                    <input type={'text'}
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
                                                         name="" placeholder="Enter your email" />
                                                 </div>
                                                 <div>
                                                     <label
-                                                        className="text-lg font-medium text-gray-700 dark:text-gray-400">Name:</label>
+                                                        className="text-lg font-medium text-gray-700 dark:text-gray-400">Email:</label>
                                                     <input type="email"
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
                                                         name="" placeholder="Enter your email" />
@@ -150,19 +150,14 @@ const Login = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="mt-5 text-right">
-                                                    <Link to={'/'}
-                                                        className="text-sm font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
-                                                        forgot password?</Link>
-                                                </div>
                                                 <button
                                                     className="w-full px-4 py-3 mt-5 font-semibold text-gray-200 bg-red-500 rounded-lg  hover:bg-red-600"
-                                                    type="submit">LOGIN</button>
+                                                    type="submit">Sign Up</button>
                                                 <div
                                                     className="flex flex-wrap items-center mt-3 text-sm text-gray-700 lg:text-base lg:mt-5 dark:text-gray-400">
-                                                    Need an account?
-                                                    <Link to={`/login/${false}`} className="ml-2 text-base font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
-                                                        Create an account</Link>
+                                                    Already have an Acocunt?
+                                                    <Link to={`/login/login`} className="ml-2 text-base font-semibold text-blue-700 dark:text-blue-300 dark:hover:text-blue-500">
+                                                        login</Link>
                                                 </div>
                                             </form>
                                         </div>

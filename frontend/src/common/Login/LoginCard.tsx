@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import sideimage from '../../assets/loginsideimage.webp';
 import { useParams } from 'react-router-dom';
-import './login.css'
 const LoginCard = () => {
     const { login } = useParams();
     return (
@@ -13,7 +12,7 @@ const LoginCard = () => {
                         <div className="flex flex-wrap ">
                             <div className="relative items-center justify-center hidden w-full lg:flex lg:w-1/2 ">
                                 <div className="absolute inset-0 z-10 bg-gray-900 opacity-40"></div>
-                                <img className="absolute inset-0 z-0 object-cover w-full h-full ml-auto test"
+                                <img className="absolute inset-0 z-0 object-contain w-full h-full ml-auto"
                                     src={sideimage} alt="Mamta Nepal" />
                                 <div className="top-0 z-10 max-w-xl mx-auto mb-12 text-center ">
                                     <h2 className="mb-4 text-4xl font-bold text-gray-100  ">
