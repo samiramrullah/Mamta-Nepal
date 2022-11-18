@@ -5,7 +5,7 @@ import hero2 from '../assets/hero2.png'
 import hero3 from '../assets/hero3.png'
 import hero4 from '../assets/hero4.png'
 import Features from "../common/Features";
-import Team from "../common/Team";
+// import Team from "../common/Team";
 function Index() {
     return (
         <>
@@ -79,7 +79,7 @@ function Index() {
             {/* Features start here */}
             <Features/>
 
-            <Team/>
+            {/* <Team/> */}
         </>
     );
 }

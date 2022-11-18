@@ -1,6 +1,18 @@
 import React from 'react'
-
+import BasicInfo from './BasicInfo'
+import { useState } from 'react'
+import AdditionalInfo from './AdditionalInfo';
 const Profile = () => {
+    const [showBasicInfo,setShowBasicInfo]=useState(true);
+    const [showAdditionalIndo,setshowAdditionalInfo]=useState(false);
+    const showBasicInfoHandler=()=>{
+        setshowAdditionalInfo(false);
+        setShowBasicInfo(true);
+    }
+    const showAdditionalIndoHandler=()=>{
+        setShowBasicInfo(false);
+        setshowAdditionalInfo(true);
+    }
     return (
         <>
             <div className="w-full h-full relative md:mt-24 shadow-2xl rounded overflow-hidden">
@@ -16,73 +28,18 @@ const Profile = () => {
 
                     <div className="col-span-12 w-full px-3 py-6 justify-center flex space-x-4 border-b border-solid md:space-x-0 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
-                        <a href="fgh" className="text-sm p-2 bg-indigo-900 text-white text-center rounded font-bold">Basic Information</a>
+                        <div onClick={showBasicInfoHandler} className="text-sm p-2 bg-indigo-900 text-white text-center rounded font-bold">Basic Information</div>
 
-                        <a href="fgh" className="text-sm p-2 bg-indigo-200 text-center rounded font-semibold hover:bg-indigo-700 hover:text-gray-200">Another Information</a>
+                        <div onClick={showAdditionalIndoHandler} className="text-sm p-2 bg-indigo-200 text-center rounded font-semibold hover:bg-indigo-700 hover:text-gray-200">Another Information</div>
 
-                        <a href="fgh" className="text-sm p-2 bg-indigo-200 text-center rounded font-semibold hover:bg-indigo-700 hover:text-gray-200">Another Something</a>
+                        <div className="text-sm p-2 bg-indigo-200 text-center rounded font-semibold hover:bg-indigo-700 hover:text-gray-200">Another Something</div>
 
                     </div>
 
                     <div className="col-span-12 md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
                         <div className="px-4 pt-4">
-                            <form action="fgh" className="flex flex-col space-y-8">
-                                <div>
-                                    <h3 className="text-2xl font-semibold">Basic Information</h3>
-                                    <hr />
-                                </div>
-
-                                <div className="form-item">
-                                    <label className="text-xl ">Full Name</label>
-                                    <input type="text" value="Samir Alam" className="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200" disabled />
-                                </div>
-
-                                <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-
-                                    <div className="form-item w-full">
-                                        <label className="text-xl ">Username</label>
-                                        <input type="text" value="alamsamir" className="w-full appearance-none text-black  rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled />
-                                    </div>
-
-                                    <div className="form-item w-full">
-                                        <label className="text-xl ">Email</label>
-                                        <input type="text" value="samiramrullah@gmail.com" className="w-full appearance-none text-black  rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-2xl font-semibold ">More About Me</h3>
-                                    <hr />
-                                </div>
-
-                                <div className="form-item w-full">
-                                    <label className="text-xl ">Biography</label>
-                                    <textarea className="w-full appearance-none text-black rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem natus nobis odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, eveniet fugiat? Explicabo assumenda dignissimos quisquam perspiciatis corporis sint commodi cumque rem tempora!</textarea>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-2xl font-semibold">My Social Media</h3>
-                                    <hr />
-                                </div>
-
-                                <div className="form-item">
-                                    <label className="text-xl ">Instagram</label>
-                                    <input type="text" value="https://instagram.com/" className="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled />
-                                </div>
-                                <div className="form-item">
-                                    <label className="text-xl ">Facebook</label>
-                                    <input type="text" value="https://facebook.com/" className="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 " disabled />
-                                </div>
-                                <div className="form-item">
-                                    <label className="text-xl ">Twitter</label>
-                                    <input type="text" value="https://twitter.com/" className="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200  " disabled />
-                                </div>
-                                 <div className="form-item">
-                                    <label className="text-xl ">Twitter</label>
-                                    <input type="text" value="https://twitter.com/" className="w-full appearance-none text-black text-opacity-50 rounded shadow py-1 px-2  mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200  " disabled />
-                                </div>
-
-                            </form>
+                           {showBasicInfo &&<BasicInfo/>}
+                           {showAdditionalIndo && <AdditionalInfo/>}
                         </div>
                     </div>
                 </div>
