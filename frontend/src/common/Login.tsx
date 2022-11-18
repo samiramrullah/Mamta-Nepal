@@ -2,8 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import sideimage from '../assets/loginsideimage.webp'
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 const Login = () => {
     const { login } = useParams();
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPasword] = useState('');
+
+    const loginHandler = (e: any) => {
+        e.preventDefault();
+        const userData = {
+            email,
+            password,
+        }
+        console.log(userData);
+        setEmail('');
+        setPasword('');
+    }
+    const signupHandler = (e:any) => {
+        e.preventDefault();
+        const userData = {
+            name,
+            email,
+            password,
+        }
+        console.log(userData);
+        setName('');
+        setEmail('');
+        setPasword('');
+    }
     return (
         <>
             <section className=" font-poppins">
@@ -39,7 +66,7 @@ const Login = () => {
                                                         fill="currentColor" className="text-gray-200 bi bi-person-circle"
                                                         viewBox="0 0 16 16">
                                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-                                                        <path fill-rule="evenodd"
+                                                        <path fillRule="evenodd"
                                                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
                                                         </path>
                                                     </svg>
@@ -47,22 +74,24 @@ const Login = () => {
                                             </div>
                                             <h2 className="mb-4 text-xl font-bold lg:mb-8 lg:text-3xl dark:text-gray-400">
                                                 Login our account</h2>
-                                            <form action="" className="p-0 m-0">
+                                            <form action="" className="p-0 m-0" onSubmit={loginHandler}>
                                                 <div>
                                                     <label
                                                         className="text-lg font-medium text-gray-700 dark:text-gray-400">Email:</label>
-                                                    <input type="email"
+                                                    <input type="email" onChange={(e) => setEmail(e.target.value)}
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                        name="" placeholder="Enter your email" />
+                                                        name="" placeholder="Enter your email"
+                                                        value={email} required
+                                                    />
                                                 </div>
                                                 <div className="mt-5">
                                                     <div>
                                                         <label
                                                             className="text-lg font-medium text-gray-700 dark:text-gray-400 ">Password:</label>
                                                         <div className="relative flex items-center mt-2">
-                                                            <input type="password"
+                                                            <input type="password" onChange={(e) => setPasword(e.target.value)}
                                                                 className="w-full px-4 py-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                                name="" placeholder="Enter password" />
+                                                                name="" placeholder="Enter password" value={password} required/>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                                 className="absolute right-0 mr-3 dark:text-gray-50  bi bi-eye-slash"
                                                                 fill="currentColor" viewBox="0 0 16 16">
@@ -106,7 +135,7 @@ const Login = () => {
                                                         fill="currentColor" className="text-gray-200 bi bi-person-circle"
                                                         viewBox="0 0 16 16">
                                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-                                                        <path fill-rule="evenodd"
+                                                        <path fillRule="evenodd"
                                                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
                                                         </path>
                                                     </svg>
@@ -114,29 +143,29 @@ const Login = () => {
                                             </div>
                                             <h2 className="mb-4 text-xl font-bold lg:mb-8 lg:text-3xl dark:text-gray-400">
                                                 Let's Connect</h2>
-                                            <form action="" className="p-0 m-0">
+                                            <form action="" className="p-0 m-0" onSubmit={signupHandler}>
                                                 <div>
                                                     <label
                                                         className="text-lg font-medium text-gray-700 dark:text-gray-400">Name:</label>
-                                                    <input type={'text'}
+                                                    <input type={'text'} onChange={(e) => setName(e.target.value)}
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                        name="" placeholder="Enter name" />
+                                                        name="" placeholder="Enter name" value={name} required/>
                                                 </div>
                                                 <div>
                                                     <label
                                                         className="text-lg font-medium text-gray-700 dark:text-gray-400">Email:</label>
                                                     <input type="email"
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                        name="" placeholder="Enter your email" />
+                                                        name="" placeholder="Enter your email" value={email} required/>
                                                 </div>
                                                 <div className="mt-5">
                                                     <div>
                                                         <label
                                                             className="text-lg font-medium text-gray-700 dark:text-gray-400 ">Password:</label>
                                                         <div className="relative flex items-center mt-2">
-                                                            <input type="password"
+                                                            <input type="password" onChange={(e) => setPasword(e.target.value)}
                                                                 className="w-full px-4 py-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                                name="" placeholder="Enter password" />
+                                                                name="" placeholder="Enter password" value={password} required />
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                                 className="absolute right-0 mr-3 dark:text-gray-50  bi bi-eye-slash"
                                                                 fill="currentColor" viewBox="0 0 16 16">
