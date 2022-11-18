@@ -3,9 +3,9 @@ import Feed from './FeedComponent/Feed'
 
 const UserFeed = () => {
   return (
-    <div className='md:grid grid-cols-4'>
+    <div className='md:grid grid-cols-3 pt-32'>
       <div className=''></div>
-      <div className='col-span-2'>
+      <div className=''>
       <Feed/>
       <Feed/>
       <Feed/>

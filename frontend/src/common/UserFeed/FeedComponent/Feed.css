@@ -2,8 +2,10 @@
     width: 100%;
     margin-top: 15px;
     border-radius: 15px;
-    background-color: rgb(212, 186, 186);
     box-shadow: 0px 5px 7px -7px rgba(0,0,0,0.75);
+    background-color: white;
+    border-color: gray;
+    border-width: 0.5px;
 }
 
 .post_top{
@@ -40,6 +42,7 @@
 
 .post_image > img{
     width: 100%;
+    max-height: 36rem;
 }
 
 .post_options {
@@ -65,7 +68,7 @@
     margin-left: 10px;
   }
   
-  .post_option:hover {
+  /* .post_option:hover {
     background-color: #eff2f5;
     border-radius: 10px;
-  }
+  } */

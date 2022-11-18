@@ -1,31 +1,32 @@
 import React from 'react';
 import "./Feed.css";
-import {Avatar} from "@material-ui/core";
+import { Avatar } from "@material-ui/core";
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import NearMeIcon from "@material-ui/icons/NearMe";
-import {ExpandMoreOutlined} from "@material-ui/icons";
+import { ExpandMoreOutlined } from "@material-ui/icons";
+import image from '../../../assets/background.jpg'
 
 const moment = require('moment');
 
-export type FeedProp={
-    profilePic?:any,
-    image?:any,
-    username?:string,
-    timestamp?:string,
-    message?:string,
+export type FeedProp = {
+    profilePic?: any,
+    // image?:any,
+    username?: string,
+    timestamp?: string,
+    message?: string,
 };
 
 
-function Feed({profilePic, image, username, timestamp, message='This is a very long message to try soemthing'}:FeedProp) {
-    
+function Feed({ profilePic, username, timestamp, message = 'This is a very long message to try soemthing' }: FeedProp) {
+
     return (
         <div className="post">
 
             <div className="post_top">
-                <Avatar src={profilePic} 
-                className="post_avatar" />
+                <Avatar src={profilePic}
+                    className="post_avatar" />
 
                 <div className="post_topInfo">
                     <h3>{username}</h3>
@@ -39,30 +40,30 @@ function Feed({profilePic, image, username, timestamp, message='This is a very l
                 <p>{message}</p>
             </div>
 
-            <div className="post_image">
-                <img src={image} alt=""/>
+            <div className="post_image  max-md:h-1/2">
+                <img src="https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" alt=""  />
             </div>
 
             <div className="post_options">
-                <div className="post_option">
-                    <ThumbUpIcon/>
+                <div className="post_option ">
+                    <ThumbUpIcon />
                     <p>Like</p>
                 </div>
 
                 <div className="post_option">
-                    <ChatBubbleOutlineIcon/>
+                    <ChatBubbleOutlineIcon />
                     <p>Comment</p>
                 </div>
 
                 <div className="post_option">
-                    <NearMeIcon/>
+                    <NearMeIcon />
                     <p>Share</p>
                 </div>
 
-                <div className="post_option">
-                    <AccountCircleIcon/>
-                    <ExpandMoreOutlined/>
-                </div>
+                {/* <div className="post_option">
+                    <AccountCircleIcon />
+                    <ExpandMoreOutlined />
+                </div> */}
 
             </div>
 
