@@ -12,7 +12,7 @@ const Login = () => {
                         <div className="flex flex-wrap ">
                             <div className="relative items-center justify-center hidden w-full lg:flex lg:w-1/2 ">
                                 <div className="absolute inset-0 z-10"></div>
-                                <img className="absolute inset-0 z-0 object-contain w-full h-full ml-auto"
+                                <img className="absolute inset-0 z-0 object-contain ml-auto items-center m-auto" width={'1000px'}
                                     src={sideimage} alt="Mamta Nepal" />
                                 <div className="top-0 z-10 max-w-xl mx-auto mb-12 text-center ">
                                     <h2 className="mb-4 text-4xl font-bold text-gray-100 dark:text-gray-300 ">
@@ -29,7 +29,7 @@ const Login = () => {
                                 </div>
                             </div>
                             {login === "login" ? (
-                                <div className="w-full py-6  lg:py-7 lg:w-1/2 dark:bg-gray-900">
+                                <div className="w-full py-6  lg:py-7 lg:w-1/2">
                                     <div className="max-w-md mx-auto">
                                         <div className="px-4 my-7 ">
                                             <div className="mb-7">
@@ -120,7 +120,7 @@ const Login = () => {
                                                         className="text-lg font-medium text-gray-700 dark:text-gray-400">Name:</label>
                                                     <input type={'text'}
                                                         className="w-full px-4 py-3 mt-3 bg-gray-200 rounded-lg dark:text-gray-400 dark:bg-gray-800 "
-                                                        name="" placeholder="Enter your email" />
+                                                        name="" placeholder="Enter name" />
                                                 </div>
                                                 <div>
                                                     <label
