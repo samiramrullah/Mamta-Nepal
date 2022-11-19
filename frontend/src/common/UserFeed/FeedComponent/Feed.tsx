@@ -45,15 +45,15 @@ function Feed({ profilePic, username, timestamp, message = 'This is a very long 
             </div>
 
             <div className="post_options">
-                <div className="post_option ">
+                <button className="post_option ">
                     <ThumbUpIcon />
                     <p>Like</p>
-                </div>
+                </button>
 
-                <div className="post_option">
+                <button className="post_option">
                     <ChatBubbleOutlineIcon />
                     <p>Comment</p>
-                </div>
+                </button>
 
                 <div className="post_option">
                     <NearMeIcon />
