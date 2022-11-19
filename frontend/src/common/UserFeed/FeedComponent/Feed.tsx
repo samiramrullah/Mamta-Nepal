@@ -23,7 +23,6 @@ function Feed({ profilePic, username, timestamp, message = 'This is a very long 
 
     return (
         <div className="post">
-
             <div className="post_top">
                 <Avatar src={profilePic}
                     className="post_avatar" />
