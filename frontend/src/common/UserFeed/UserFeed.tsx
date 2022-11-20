@@ -4,7 +4,7 @@ import Feed from './FeedComponent/Feed'
 
 const UserFeed = () => {
   return (
-    <div className='md:grid grid-cols-3 pt-32'>
+    <div className='md:grid grid-cols-3 pt-24'>
       <div className=''>
         <Sidenavbar/>
       </div>
