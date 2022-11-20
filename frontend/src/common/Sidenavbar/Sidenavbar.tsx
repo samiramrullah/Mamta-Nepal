@@ -4,7 +4,7 @@ import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar';
 const Sidenavbar = () => {
     const { collapseSidebar } = useProSidebar();
     return (
-        <div style={{ display: 'flex'}}>
+        <div className='.flex fixed'>
             <Sidebar>
                 <Menu>
                     <MenuItem> Documentation</MenuItem>
@@ -12,9 +12,9 @@ const Sidenavbar = () => {
                     <MenuItem> E-commerce</MenuItem>
                 </Menu>
             </Sidebar>
-            <main>
+            {/* <main>
                 <button className='bg-red-800' onClick={() => collapseSidebar()}>Collapse</button>
-            </main>
+            </main> */}
         </div>
     )
 }
