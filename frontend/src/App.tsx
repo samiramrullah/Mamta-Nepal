@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Footer from './common/Footer';
 import Profile from './common/UserProfile/Profile';
 import UserFeed from './common/UserFeed/UserFeed';
+import InitalQuery from './utils/modals/InitalQuery';
 const App = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/userfeed' element={<UserFeed />} />
+        <Route path='/test' element={<InitalQuery />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
