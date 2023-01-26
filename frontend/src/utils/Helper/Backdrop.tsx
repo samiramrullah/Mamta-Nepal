@@ -1,25 +1,25 @@
 import Backdrop from "@mui/material/Backdrop";
-import Button from "@mui/material/Button";
 import { useState } from "react";
+// import { userType } from "./userType";
 
-const BackdropWrapper = ({children}:any) => {
-    const [open, setOpen] = useState(false);
+
+const BackdropWrapper = ({ children, currentuserType }: any) => {
+    const [open, setOpen] = useState(true);
     const handleClose = () => {
-        setOpen(true);
-    };
-    const handleToggle = () => {
-        setOpen(!open);
+        if (currentuserType) {
+            setOpen(false)
+        }
     };
 
     return (
         <div>
-            <Button onClick={handleToggle}>Show backdrop</Button>
+           
             <Backdrop
-                sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 5 }}
                 open={open}
                 onClick={handleClose}
             >
-                <h1>I am testing </h1>
+                {children}
             </Backdrop>
         </div>
     );
