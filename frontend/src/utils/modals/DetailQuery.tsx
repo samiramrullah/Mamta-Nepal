@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-const DetailQuery = ({setCurrentUserType}:any) => {
+const DetailQuery = () => {
     const rootRef = React.useRef<HTMLDivElement>(null);
 
     return (

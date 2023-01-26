@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { userType } from '../Helper/userType';
 import BasicQuery from './BasicQuery';
 import DetailQuery from './DetailQuery';
+import PostpregnantQuery from './PostpregnantQuery';
 const Query = () => {
     // const [open, setOpen] = useState(false);
     // const handleOpen = () => setOpen(true);
@@ -26,7 +27,7 @@ const Query = () => {
     if (currentUserType === userType.postpregnant) {
         return (
             <div className="mt-60">
-                <DetailQuery />
+               <PostpregnantQuery/>
             </div>
 
         )

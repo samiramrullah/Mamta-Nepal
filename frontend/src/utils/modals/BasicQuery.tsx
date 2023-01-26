@@ -44,12 +44,12 @@ const BasicQuery = ({userTypeHandler}:any) => {
                                 </button>
                             </div>
                             <div  className="flex-inital w-48">
-                                <button  onClick={()=>userTypeHandler(userType.prepregnant)} className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
+                                <button  onClick={()=>userTypeHandler(userType.postpregnant)} className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
                                     Post Pregenent
                                 </button>
                             </div>
                         </div>
-                        <button  onClick={()=>userTypeHandler(userType.prepregnant)}  className='mt-4 ml-20 text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
+                        <button  onClick={()=>userTypeHandler(userType.genericUser)}  className='mt-4 ml-20 text-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
                             Generic User
                         </button>
                     </Typography>
