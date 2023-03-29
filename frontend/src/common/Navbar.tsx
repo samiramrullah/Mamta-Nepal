@@ -1,12 +1,13 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png'
 const Navbar = () => {
     return (
         <div className='bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200'>
             <nav className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20 top-0 left-0">
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <NavLink to={'/'} className="flex items-center">
-                        <img src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.15752-9/314599360_705958487664640_470883661961253019_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=1TneGAs4nkgAX-5lQi4&_nc_ht=scontent.fdel29-1.fna&oh=03_AdTxdKgCxXCHMzG9JLbp23eZ8RPFts0By2pZJ8HiRS7_8Q&oe=639B3B07" className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+                        <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Mamta Nepal</span>
                     </NavLink>
                     <div className="flex md:order-2">

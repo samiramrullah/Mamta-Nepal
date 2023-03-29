@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import Footer from './common/Footer';
 import Profile from './common/UserProfile/Profile';
 import UserFeed from './common/UserFeed/UserFeed';
-import BasicQuery from './utils/modals/BasicQuery'
+import Query from './utils/Query/Query';
 const App = () => {
   return (
     <>
@@ -22,7 +22,7 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/userfeed' element={<UserFeed />} />
-        <Route path='/test' element={<BasicQuery />} />
+        <Route path='/test' element={<Query/>} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
