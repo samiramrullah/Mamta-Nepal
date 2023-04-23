@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
-const jwt=require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 const userSchema = require('../models/user')
 
@@ -11,12 +11,15 @@ router.post('/register', async (req, res, next) => {
         const { name, email, password } = req.body;
         if (!name || !email || !password) return res.status(400).json({ message: 'Invalid data' })
         if (!validator.isEmail(email)) return res.status(400).json({ message: "Invalid Email" })
-
-        //if email already exist
         const user = await userSchema.findOne({ email })
         if (user) return res.status(400).json({ message: "Email Already in use" })
 
-        //save to database
+        const passwordRegex = /^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!passwordRegex.test(password)) {
+            return res.status(400).json({
+                message: "Password should be at least 8 characters long, contain at least one special character, one letter and one number"
+            })
+        }
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt)
         const newUser = new userSchema({ _id: new mongoose.Types.ObjectId, name, email, password: hashedPassword })
