@@ -19,3 +19,29 @@
        However, when extended is set to true, the same URL-encoded data can be parsed into the following object:
 
        { name: 'John', age: 30 }
+
+       ***********************************
+
+  # Frontend
+  ## Technologies Used
+    * TypeScript
+    * React JS
+    * Tailwind Css
+    * Material Ui
+  
+
+# Backend
+## Technologies Used
+   * Node js
+   * Express
+   * Mogodb (Mongo cloud)
+   * Mongoose
+  # User management
+    1. register
+      * name
+      * email (unique)
+      * password (at least 8 character, at least a special character, at least a capital letter)
+
+    2. Login 
+      * email
+      * password

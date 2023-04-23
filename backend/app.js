@@ -3,11 +3,13 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const mongoose=require('mongoose')
 const app=express();
+
+
 require('dotenv').config();
 
 //Routes
 const userRoute=require('./api/routes/user')
-
+const postRoute=require('./api/routes/post')
 // morgan
 app.use(morgan('dev'))
 
@@ -40,6 +42,7 @@ app.use(bodyParser.json())
 
 // Routes
 app.use('/user',userRoute)
+app.use('/post',postRoute)
 
 
 //Error handeling
