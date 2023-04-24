@@ -45,6 +45,10 @@
     2. Login 
       * email
       * password
+    
+  # Post
+    * Contain 4 modals for post
+    * post modal is liked to comment , likes and share modal
 
 
 
