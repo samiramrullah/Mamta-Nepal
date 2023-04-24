@@ -13,7 +13,7 @@ import Query from './utils/Query/Query';
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path='/' element={<Index />} />
         <Route path='/login/:login' element={<Login />} />

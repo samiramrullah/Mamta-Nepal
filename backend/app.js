@@ -8,8 +8,9 @@ const app=express();
 require('dotenv').config();
 
 //Routes
-const userRoute=require('./api/routes/user')
+const userRoute=require('./api/routes/userManagement/user')
 const postRoute=require('./api/routes/post')
+const questionnaireRoute=require('./api/routes/userManagement/questionnaire')
 // morgan
 app.use(morgan('dev'))
 
@@ -43,6 +44,7 @@ app.use(bodyParser.json())
 // Routes
 app.use('/user',userRoute)
 app.use('/post',postRoute)
+app.use('/questionnaire',questionnaireRoute)
 
 
 //Error handeling

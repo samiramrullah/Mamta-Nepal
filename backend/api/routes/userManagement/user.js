@@ -4,7 +4,7 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
-const userSchema = require('../../models/user')
+const userSchema = require('../../../models/user')
 
 router.post('/register', async (req, res, next) => {
     try {
