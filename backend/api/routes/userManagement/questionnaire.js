@@ -3,7 +3,7 @@ const router = express.Router();
 const userSchema = require("../../../models/user");
 const checkAuth = require("../../../middleware/check-auth");
 
-router.post("/", checkAuth, async (req, res, next) => {
+router.put("/", checkAuth, async (req, res, next) => {
     try {
 
         const userId = req.userData.userId;

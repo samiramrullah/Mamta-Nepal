@@ -6,6 +6,15 @@ const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose')
 const userSchema = require('../../../models/user')
 
+/**
+ * @swagger
+ * /user/register:
+ *   post:
+ *     description: Regestration Process
+ *     responses:
+ *       200:
+ *         description: Toke  is returned
+ */
 router.post('/register', async (req, res, next) => {
     try {
         const { name, email, password } = req.body;

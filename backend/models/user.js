@@ -12,7 +12,9 @@ const userSchema=mongoose.Schema({
     height:{type:Number},
     NoOfChildren:{type:Number},
     gender:{type:String},
-    userType:{type:String}
+    userType:{type:String},
+    posts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Post' }]
+
 })
 
 module.exports=mongoose.model('Users',userSchema);

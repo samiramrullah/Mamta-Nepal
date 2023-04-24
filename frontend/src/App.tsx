@@ -2,7 +2,7 @@ import Index from './pages/Index'
 import { Routes, Route } from 'react-router-dom';
 import Error from './pages/Error';
 import Login from './common/Login';
-import Navbar from './common/Navbar';
+// import Navbar from './common/Navbar';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';

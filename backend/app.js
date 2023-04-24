@@ -1,26 +1,51 @@
-const express=require('express')
+const express = require('express')
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
-const mongoose=require('mongoose')
-const app=express();
+const mongoose = require('mongoose')
+const swaggerUi = require('swagger-ui-express');
+const swaggerJSDoc = require('swagger-jsdoc');
+
+const app = express();
+
+// Swagger configuration
+const swaggerOptions = {
+    definition: {
+        openapi: '3.0.0',
+        info: {
+            title: 'My API',
+            version: '1.0.0',
+            description: 'A simple API'
+        },
+        servers: [
+            {
+                url: 'http://localhost:5000'
+            }
+        ]
+    },
+    apis: ['./api/routes/userManagement/user.js']
+};
+
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+
 
 
 require('dotenv').config();
 
 //Routes
-const userRoute=require('./api/routes/userManagement/user')
-const postRoute=require('./api/routes/post')
-const questionnaireRoute=require('./api/routes/userManagement/questionnaire')
+const userRoute = require('./api/routes/userManagement/user')
+const questionnaireRoute = require('./api/routes/userManagement/questionnaire')
+const postRoute = require('./api/routes/Post/post')
 // morgan
 app.use(morgan('dev'))
 
 //db connection
-mongoose.connect(process.env.ConnectionString).then(()=>{
+mongoose.connect(process.env.ConnectionString).then(() => {
     console.log('Connected to Database');
-}).catch((err)=>console.log(err))
+}).catch((err) => console.log(err))
 mongoose.Promise = global.Promise;
-
-
 
 
 //Handeling cors error
@@ -37,14 +62,16 @@ app.use((req, res, next) => {
 
 
 //bodyparser
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 
+
+
 // Routes
-app.use('/user',userRoute)
-app.use('/post',postRoute)
-app.use('/questionnaire',questionnaireRoute)
+app.use('/user', userRoute)
+app.use('/post', postRoute)
+app.use('/questionnaire', questionnaireRoute)
 
 
 //Error handeling
@@ -67,4 +94,4 @@ app.use((error, req, res, next) => {
     })
 })
 
-module.exports=app;
+module.exports = app;
