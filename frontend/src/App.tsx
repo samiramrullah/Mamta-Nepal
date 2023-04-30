@@ -10,6 +10,10 @@ import Footer from './common/Footer';
 import Profile from './common/UserProfile/Profile';
 import UserFeed from './common/UserFeed/UserFeed';
 import Query from './utils/Query/Query';
+import {OnboardingStepper} from './common/Onboarding/stepperComponent';
+import Content from './common/Onboarding/Content';
+import { OnboardingComponent } from './common/Onboarding/onboardingComponent';
+
 const App = () => {
   return (
     <>
@@ -23,7 +27,8 @@ const App = () => {
         <Route path='/profile' element={<Profile />} />
         <Route path='/userfeed' element={<UserFeed />} />
         <Route path='/test' element={<Query/>} />
-        <Route path='*' element={<Error />} />
+        <Route path='/testOnboarding' element={ <OnboardingComponent />} />
+        <Route path='*' element={<Error/>}/>
       </Routes>
       <Footer />
     </>
