@@ -38,6 +38,7 @@ require('dotenv').config();
 const userRoute = require('./api/routes/userManagement/user')
 const questionnaireRoute = require('./api/routes/userManagement/questionnaire')
 const postRoute = require('./api/routes/Post/post')
+
 // morgan
 app.use(morgan('dev'))
 
@@ -49,7 +50,6 @@ mongoose.Promise = global.Promise;
 
 
 //Handeling cors error
-
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*')  //wildcard
     res.header('Access-Control-Allow-Headers', '*');
@@ -67,7 +67,6 @@ app.use(bodyParser.json())
 
 
 
-
 // Routes
 app.use('/user', userRoute)
 app.use('/post', postRoute)
@@ -76,7 +75,6 @@ app.use('/questionnaire', questionnaireRoute)
 
 //Error handeling
 //if no paths matched
-
 app.use((req, res, next) => {
     const error = new Error('No matching paths')
     error.status = 404;
