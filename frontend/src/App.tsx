@@ -2,7 +2,7 @@ import Index from './pages/Index'
 import { Routes, Route } from 'react-router-dom';
 import Error from './pages/Error';
 import Login from './common/Login';
-// import Navbar from './common/Navbar';
+import Navbar from './common/Navbar';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -10,14 +10,14 @@ import Footer from './common/Footer';
 import Profile from './common/UserProfile/Profile';
 import UserFeed from './common/UserFeed/UserFeed';
 import Query from './utils/Query/Query';
-import {OnboardingStepper} from './common/Onboarding/stepperComponent';
-import Content from './common/Onboarding/Content';
-import { OnboardingComponent } from './common/Onboarding/onboardingComponent';
+// import {OnboardingStepper} from './common/Onboarding/stepperComponent';
+// import Content from './common/Onboarding/Content';
+import OnboardingComponent  from './common/Onboarding/onboardingComponent';
 
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path='/' element={<Index />} />
         <Route path='/login/:login' element={<Login />} />
