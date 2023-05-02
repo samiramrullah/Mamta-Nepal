@@ -50,6 +50,3 @@
     * Contain 4 modals for post
     * post modal is liked to comment , likes and share modal
 
-
-
-## gaurav.verma@nagarro.com
